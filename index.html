@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b2a">
+  <meta name="description" content="Al-Barakah Foods — rice, pulses and grains from Ghala Mandi, Sargodha, Pakistan. Established in 1997.">
+  <title>Al-Barakah Foods | Rice & Pulses Since 1997</title>
+  <style>
+    :root{--green:#123b2a;--green2:#1c563c;--gold:#d6ae59;--cream:#f8f5ec;--ink:#17251d;--muted:#68766d;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit}
+    .topbar{background:var(--green);color:#f7f1df;text-align:center;padding:8px 14px;font-size:13px;letter-spacing:.4px}
+    header{background:rgba(248,245,236,.96);border-bottom:1px solid #e8e0ce;position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+    .nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+    .logo{width:46px;height:46px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:var(--gold);font-size:24px;border:2px solid var(--gold)}
+    .brand strong{display:block;font-family:Georgia,serif;font-size:20px;color:var(--green);line-height:1.1}
+    .brand small{display:block;font-size:10px;letter-spacing:2px;color:#777;margin-top:4px}
+    nav{display:flex;align-items:center;gap:24px}
+    nav a{text-decoration:none;font-size:14px;font-weight:700}
+    nav a:hover{color:#9a7429}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;border-radius:999px;padding:12px 19px}
+    .nav-cta,.btn-primary{background:var(--gold);color:#1d2b20}
+    .hero{background:linear-gradient(115deg,rgba(10,43,29,.97),rgba(18,59,42,.91)),radial-gradient(circle at 85% 20%,#597c4b,transparent 35%);color:white;overflow:hidden}
+    .hero-inner{max-width:1160px;margin:auto;padding:82px 22px 88px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:45px}
+    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.03;margin:17px 0 22px;letter-spacing:-1.6px}
+    h1 em{font-style:normal;color:var(--gold)}
+    .hero p{color:#e2e8df;max-width:540px;font-size:17px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}
+    .btn-outline{border:1px solid #b7c6b9;color:white}
+    .hero-note{margin-top:25px;color:#c4d0c5;font-size:13px}
+    .grain-art{min-height:340px;position:relative;display:grid;place-items:center}
+    .sun{width:260px;height:260px;border-radius:50%;background:linear-gradient(145deg,#e6c977,#b58a3d);position:absolute;right:9%;top:6%;box-shadow:0 0 80px #d6ae5930}
+    .bowl{position:relative;width:min(360px,90%);height:180px;border-radius:0 0 180px 180px;background:linear-gradient(145deg,#f8f0d7,#c7a86a);border:8px solid #f2dfad;border-top:0;box-shadow:0 30px 50px #061b12aa;transform:translateY(42px);z-index:1}
+    .bowl:before{content:"";position:absolute;left:-8px;right:-8px;top:-18px;height:48px;border-radius:50%;background:#f8f0d7;border:8px solid #e4c887;box-shadow:inset 0 -8px 0 #c5a45f}
+    .rice{position:absolute;z-index:2;top:91px;left:calc(50% - 124px);width:248px;height:105px;display:flex;justify-content:center;align-content:center;flex-wrap:wrap;gap:5px;transform:rotate(-4deg)}
+    .rice span{width:24px;height:7px;border-radius:80% 40%;background:#fff9e9;box-shadow:inset -2px -1px #e4d9bd;transform:rotate(var(--r))}
+    .leaf{position:absolute;z-index:3;width:80px;height:30px;background:#47764c;border-radius:100% 0 100% 0;transform:rotate(-28deg);top:35px;right:4%;border:1px solid #80a16c}
+    .quality-stamp{position:absolute;left:0;bottom:0;background:#f8f5ec;color:var(--green);width:118px;height:118px;border-radius:50%;display:grid;place-items:center;text-align:center;border:2px solid var(--gold);font-size:11px;font-weight:800;letter-spacing:1px;transform:rotate(-12deg);z-index:4;box-shadow:0 8px 24px #0002}
+    .quality-stamp b{font:27px Georgia,serif;display:block;color:#a77c2d}
+    .trust-strip{background:#fffdf7;border-bottom:1px solid #e9e1d2}
+    .trust-inner{max-width:1160px;margin:auto;padding:23px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+    .trust-inner strong{display:block;color:var(--green);font:22px Georgia,serif}
+    .trust-inner span{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+    section.content{max-width:1160px;margin:auto;padding:78px 22px}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .section-head h2{font-size:clamp(32px,4vw,45px);color:var(--green);line-height:1.15;margin:10px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .product{background:#fffdf7;border:1px solid #e9e1d2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .product:hover{transform:translateY(-5px);box-shadow:0 18px 35px #163b2914}
+    .product-visual{height:180px;display:grid;place-items:center;position:relative;overflow:hidden}
+    .product-visual.rice-bg{background:#eee4c9}.product-visual.pulse-bg{background:#e7dfc7}.product-visual.grain-bg{background:#dfe6d5}
+    .sack{width:112px;height:125px;background:linear-gradient(110deg,#f5e7c7,#c9ad7d);border-radius:18px 18px 12px 12px;position:relative;box-shadow:inset -12px 0 15px #9e7f4a22,0 14px 20px #0001;transform:rotate(-4deg)}
+    .sack:before{content:"";position:absolute;top:0;left:0;right:0;height:17px;background:#c4a16a;border-radius:12px 12px 3px 3px}
+    .sack:after{content:"AL-BARAKAH";position:absolute;left:0;right:0;top:52px;text-align:center;color:#244d34;font-weight:800;font-size:10px;letter-spacing:.5px}
+    .beans{position:absolute;bottom:19px;display:flex;gap:7px}
+    .beans i{width:25px;height:13px;background:#c5a46b;border-radius:60% 40%;transform:rotate(-25deg);box-shadow:inset -3px -2px #a88952}
+    .beans i:nth-child(2n){transform:rotate(25deg);background:#e0c99a}
+    .product-copy{padding:22px}
+    .product-copy h3{margin:0 0 8px;color:var(--green);font-size:24px}
+    .product-copy p{margin:0 0 15px;color:var(--muted);font-size:14px}
+    .text-link{color:#88651f;text-decoration:none;font-weight:800;font-size:13px}
+    .about{background:#eae8d8}
+    .about-inner{max-width:1160px;margin:auto;padding:75px 22px;display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+    .about-card{background:var(--green);color:#fff;padding:38px;border-radius:18px;position:relative;overflow:hidden}
+    .about-card:after{content:"";position:absolute;width:190px;height:190px;border:1px solid #d6ae5966;border-radius:50%;right:-60px;bottom:-70px}
+    .about-card .big{font:68px Georgia,serif;color:var(--gold);line-height:1}
+    .about-card h3{font-size:25px;margin:12px 0}
+    .about-card p{color:#d9e2d9}
+    .about-text h2{font-size:clamp(32px,4vw,44px);line-height:1.12;color:var(--green);margin:10px 0 18px}
+    .about-text p{color:#5f6c61}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .checks span{font-weight:700;font-size:14px;color:var(--green)}
+    .checks span:before{content:"✓";color:#a57a29;font-size:18px;margin-right:8px}
+    .contact{background:var(--green);color:#fff}
+    .contact .section-head h2{color:#fff}.contact .section-head p{color:#d0ddd2}
+    .contact-box{max-width:850px;margin:auto;background:#fffdf7;color:var(--ink);padding:30px;border-radius:18px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .contact-item{padding:8px}
+    .contact-item small{display:block;color:#8d742e;text-transform:uppercase;font-size:11px;letter-spacing:2px;font-weight:800}
+    .contact-item strong{display:block;font:22px Georgia,serif;color:var(--green);margin:7px 0}
+    .contact-item p{font-size:14px;color:var(--muted);margin:0}
+    .contact-action{grid-column:1/-1;text-align:center;padding-top:12px}
+    footer{background:#0b291c;color:#c7d3c8;padding:22px;text-align:center;font-size:12px}
+    footer strong{color:var(--gold)}
+    .notice{max-width:900px;margin:0 auto 25px;padding:12px 16px;border:1px dashed #a9853e;border-radius:10px;color:#f6e9c7;font-size:13px}
+    @media(max-width:760px){
+      .nav{padding:12px 16px}nav{gap:12px}nav a:not(.nav-cta){display:none}.brand strong{font-size:17px}
+      .hero-inner{grid-template-columns:1fr;padding-top:58px;gap:15px}.grain-art{min-height:290px}.sun{width:215px;height:215px;right:12%}.bowl{height:145px;width:290px}.rice{top:78px;left:calc(50% - 105px);width:210px}.rice span{width:19px}.quality-stamp{width:95px;height:95px;font-size:9px}.quality-stamp b{font-size:22px}
+      .trust-inner{gap:8px;padding:18px 12px}.trust-inner strong{font-size:18px}.trust-inner span{font-size:9px}
+      section.content{padding:58px 17px}.products{grid-template-columns:1fr}.product{display:grid;grid-template-columns:38% 62%}.product-visual{height:100%;min-height:175px}.sack{transform:scale(.78) rotate(-4deg)}.product-copy{padding:18px 15px}.product-copy h3{font-size:21px}
+      .about-inner{grid-template-columns:1fr;padding:58px 17px;gap:30px}.about-card{padding:30px}.contact-box{grid-template-columns:1fr;padding:22px}.contact-action{grid-column:auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">ESTABLISHED 1997 &nbsp; • &nbsp; RICE, PULSES & GRAINS &nbsp; • &nbsp; SARGODHA, PAKISTAN</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="Al-Barakah Foods home">
+        <div class="logo">✦</div><div><strong>Al-Barakah Foods</strong><small>RICE & PULSES</small></div>
+      </a>
+      <nav>
+        <a href="#products">Products</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Get in Touch ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Quality you can count on</div>
+          <h1>Good food.<br><em>Honest trade.</em></h1>
+          <p>Bringing quality rice, pulses and grains to our customers with care, consistency and the experience of a family business established in 1997.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Explore Products ↓</a>
+            <a class="btn btn-outline" href="#contact">Wholesale Enquiries</a>
+          </div>
+          <div class="hero-note">Based in Ghala Mandi, Sargodha, Pakistan</div>
+        </div>
+        <div class="grain-art" aria-label="Illustration of a bowl of rice">
+          <div class="sun"></div><div class="leaf"></div>
+          <div class="rice">
+            <span style="--r:20deg"></span><span style="--r:-25deg"></span><span style="--r:40deg"></span><span style="--r:-10deg"></span><span style="--r:15deg"></span><span style="--r:-40deg"></span><span style="--r:10deg"></span><span style="--r:25deg"></span><span style="--r:-15deg"></span><span style="--r:35deg"></span><span style="--r:-30deg"></span><span style="--r:10deg"></span><span style="--r:40deg"></span><span style="--r:-5deg"></span><span style="--r:20deg"></span><span style="--r:-20deg"></span><span style="--r:15deg"></span><span style="--r:35deg"></span><span style="--r:-10deg"></span><span style="--r:5deg"></span><span style="--r:-30deg"></span><span style="--r:20deg"></span><span style="--r:10deg"></span><span style="--r:-20deg"></span><span style="--r:30deg"></span><span style="--r:-10deg"></span><span style="--r:15deg"></span><span style="--r:25deg"></span><span style="--r:-25deg"></span><span style="--r:5deg"></span><span style="--r:35deg"></span><span style="--r:-10deg"></span>
+          </div>
+          <div class="bowl"></div>
+          <div class="quality-stamp"><div><b>27+</b>YEARS OF<br>EXPERIENCE</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="trust-inner">
+        <div><strong>Since 1997</strong><span>Experience & trust</span></div>
+        <div><strong>Rice & Pulses</strong><span>Everyday essentials</span></div>
+        <div><strong>Sargodha</strong><span>Punjab, Pakistan</span></div>
+      </div>
+    </div>
+
+    <section class="content" id="products">
+      <div class="section-head">
+        <div class="eyebrow">What we offer</div>
+        <h2>Everyday staples, carefully sourced.</h2>
+        <p>Explore our core product categories. Ask us about available varieties, grades, packaging and wholesale quantities.</p>
+      </div>
+      <div class="products">
+        <article class="product">
+          <div class="product-visual rice-bg"><div class="sack"></div></div>
+          <div class="product-copy"><h3>Rice</h3><p>Rice varieties for retailers, wholesalers and everyday kitchens. Availability and packing options can be discussed with our team.</p><a class="text-link" href="#contact">Enquire about rice ↗</a></div>
+        </article>
+        <article class="product">
+          <div class="product-visual pulse-bg"><div class="sack" style="background:linear-gradient(110deg,#e9d8b1,#b79b69)"></div><div class="beans"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="product-copy"><h3>Pulses & Daal</h3><p>A range of pulse essentials for homes and trade customers. Contact us to check current stock and available quantities.</p><a class="text-link" href="#contact">Enquire about pulses ↗</a></div>
+        </article>
+        <article class="product">
+          <div class="product-visual grain-bg"><div class="sack" style="background:linear-gradient(110deg,#e6d4a8,#ad9561)"></div><div class="beans"><i style="background:#b2a16e"></i><i style="background:#d4c18c"></i><i style="background:#b2a16e"></i><i style="background:#d4c18c"></i></div></div>
+          <div class="product-copy"><h3>Grains & Staples</h3><p>Ask about other staple products and sourcing options for your shop, business or bulk requirements.</p><a class="text-link" href="#contact">Make an enquiry ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-card">
+          <div class="big">1997</div>
+          <h3>A business built on relationships.</h3>
+          <p>Serving the rice and pulses trade from Ghala Mandi, Sargodha. We value dependable service, clear communication and long-term customer relationships.</p>
+        </div>
+        <div class="about-text">
+          <div class="eyebrow">Our story</div>
+          <h2>Experience that starts with trust.</h2>
+          <p>Al-Barakah Foods is a rice and pulses business based in Ghala Mandi, Sargodha, Pakistan. With roots going back to 1997, our focus is on helping customers source everyday food staples and discuss their trade requirements directly with us.</p>
+          <p>Whether you are a retailer, wholesaler or bulk buyer, contact us to ask about products, availability and quantities.</p>
+          <div class="checks"><span>Wholesale enquiries</span><span>Product availability</span><span>Trade-focused service</span><span>Based in Sargodha</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content contact" id="contact">
+      <div class="section-head">
+        <div class="eyebrow">Let's talk business</div>
+        <h2>Looking for rice or pulses?</h2>
+        <p>Contact us for product availability, wholesale quantities and business enquiries.</p>
+      </div>
+      <div class="notice">Website setup note: before publishing, replace the sample contact details in this page with your real phone number and WhatsApp number.</div>
+      <div class="contact-box">
+        <div class="contact-item"><small>Visit us</small><strong>Al-Barakah Foods</strong><p>Ghala Mandi, Sargodha<br>Punjab, Pakistan</p></div>
+        <div class="contact-item"><small>Call or WhatsApp</small><strong>Add your number</strong><p>Update this section with your business phone and WhatsApp contact before sharing the website.</p></div>
+        <div class="contact-action"><a class="btn btn-primary" href="https://wa.me/923000000000" onclick="return confirm('This is a sample WhatsApp number. Update it in index.html to your real number before publishing. Continue?')">WhatsApp for Enquiries ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> <strong>Al-Barakah Foods</strong> · Rice & Pulses · Ghala Mandi, Sargodha, Pakistan</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
